@@ -76,8 +76,10 @@ The project will be available at **127.0.0.1:8000**.
 
 ## Different Endpoints
 
-There are 3 endpoints in the project:
+There are 4 endpoints in the project:
 1. **`/admin`:** This allows user to login with the admin credentials and manage the project. The user can view the tables of the database and can also edit them directly in the provided interface.
+
+
 
 2. **`/youtube/startFetching`:** This endpoint triggers a background asynchronorous job to fetch information of videos. This endpoint also supports an optional query parameter to take the search query:
 ```
@@ -85,6 +87,8 @@ http://localhost:8000/youtube/startFetching?searchQuery=Cricket
 http://localhost:8000/youtube/startFetching?searchQuery=Westeros
 ```
 The `searchQuery` is optional and defaults to `Friends TV Show` if not provided.
+
+
 
 3. **`/youtube`:** This endpoint returns the stored video data in a paginated response sorted in descending order of published datetime. This endpoint also supports a query parameter to facilitate pagination as following:
 
@@ -95,7 +99,10 @@ http://localhost:8000/youtube/?page=2
 .
 http://localhost:8000/youtube/?page=pageNumber
 ```
-2. **`/youtube/search`:** This endpoint implements search API to fetch stored video data using their title and description. This endpoint also supports an optional query parameter to take the keywords:
+
+
+
+4. **`/youtube/search`:** This endpoint implements search API to fetch stored video data using their title and description. This endpoint also supports an optional query parameter to take the keywords:
 ```
 http://localhost:8000/youtube/search?keywords=Cricket
 http://localhost:8000/youtube/search?keywords=Westeros
