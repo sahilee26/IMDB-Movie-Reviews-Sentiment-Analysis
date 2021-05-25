@@ -31,7 +31,7 @@ cd fetch-youtube-api-django
 ```
 
 
-3. Build and run the container with the command
+3. Build and run the docker container with the command
  
  ```bash
 docker-compose up
